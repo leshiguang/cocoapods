@@ -1,0 +1,87 @@
+#
+# Be sure to run `pod lib lint LSBluetoothUI_iOS.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#
+
+Pod::Spec.new do |s|
+  s.name             = 'LSBluetoothUI_iOS'
+  s.version          = '0.3.0'
+  s.summary          = 'A short description of LSBluetoothUI_iOS.'
+
+# This description is used to generate tags and improve search results.
+#   * Think: What does it do? Why did you write it? What is the focus?
+#   * Try to keep it short, snappy and to the point.
+#   * Write the description between the DESC delimiters below.
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+
+  s.description      = <<-DESC
+TODO: Add long description of the pod here.
+                       DESC
+
+  s.homepage         = 'https://gitlab.lifesense.com/lego/lsbluetoothui_ios.git'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'tanjian' => 'malai_520@163.com' }
+  s.source           = { :http => "https://raw.githubusercontent.com/leshiguang/Framework/main/LSBluetoothUI_iOS/#{s.version.to_s}/LSBluetoothUI_iOS.framework.zip"}
+
+  s.ios.deployment_target = '9.0'
+  
+  s.public_header_files = 'LSBluetoothUI_iOS/LSBluetoothUI.h'
+
+  
+  
+  s.frameworks   = 'UIKit', 'Foundation'
+  s.requires_arc = true
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.ios.deployment_target = "9.0"
+
+  s.dependency 'IQKeyboardManager', ">= 4"
+  s.dependency 'SDWebImage', '>= 4'
+  s.dependency 'Masonry', '~> 1.1'
+  s.dependency 'YYModel', '~> 1.0'
+  s.dependency 'Logan', '~> 1.2'
+  s.dependency 'LZBluetooth', '~> 1.5'
+  s.libraries = 'z', 'c++', 'stdc++'
+  s.vendored_framework = 'LSBluetoothUI_iOS.framework'
+#  s.source_files = 'LSBluetoothUI_iOS/Classes/**/*'
+#  s.resource_bundles = {
+#     'LSAuthorization' => ['LSBluetoothUI_iOS/Assets/LSAuthorization/*'],
+#     'LSBluetoothUI_iOS' => ['LSBluetoothUI_iOS/Assets/LSBluetoothUI_iOS/**/*'],
+#     'LSDeviceManager' => ['LSBluetoothUI_iOS/Assets/LSDeviceManager/LSDeviceManager.bundle/*'],
+#  }
+#
+#  s.resources = "LSBluetoothUI_iOS/Assets/LSDeviceManager/*.xcdatamodeld"
+#  s.private_header_files = [
+#    'LSBluetoothUI_iOS/Classes/LSDeviceManager/**/LSTools.h',
+#    'LSBluetoothUI_iOS/Classes/LSDeviceManager/**/LSWifiConfigBridge.h'
+#  ]
+  s.prefix_header_contents = <<-EOS
+  #ifdef __OBJC__
+  #import "LSWAppAppearanceConfigrationMacro.h"
+  #import "LSWAppColorConfigrationMacro.h"
+  #import "LSWAppFontConfigrationMacro.h"
+  #import "LSWConstants.h"
+  #import "UIColor+Hex.h"
+  #import "NSString+LSWAddition.h"
+  #import "TKAlertViewController.h"
+  #import "LSWAttributedUtil.h"
+  #import "ServerCommunicationManager.h"
+  #import "LSWRouter.h"
+  #import "LSWRouterDefine.h"
+  #import "LSWMacro.h"
+  #import "NSBundle+LSBluetoothUI.h"
+  #import "LSBluetoothUIAccountInfo.h"
+  #import "UIViewController+MBProgressHUD.h"
+  
+  #else
+  #endif
+  EOS
+
+  
+end
