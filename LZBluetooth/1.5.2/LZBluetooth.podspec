@@ -8,9 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LZBluetooth'
-
   s.version          = '1.5.2'
-
   s.summary          = '乐智蓝牙设备服务'
   s.description      = <<-DESC
 乐智蓝牙设备服务的模块
@@ -21,6 +19,7 @@ Pod::Spec.new do |s|
   s.license          = "MIT"
   s.author           = { 'tanjian' => 'malai_520@163.com' }
   s.source           = { :http => "https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/#{s.version.to_s}/LZBluetooth.framework.zip"}
+#  s.source = { :git => 'git@gitlab.lifesense.com:delivery-ios/lzbluetooth.git', :tag => s.version.to_s }
     
 
   s.frameworks   = 'UIKit', 'Foundation'
@@ -37,3 +36,5 @@ end
 # 上传命令
 # pod repo push lifesense-commonlib_ios-cocoapodsspecs LZBluetooth.podspec --allow-warnings
 # pod repo push leshiguang LZBluetooth.podspec --allow-warnings --verbose
+
+#pod package --local LZBluetooth.podspec --dynamic --no-mangle --spec-sources=https://gitlab.lifesense.com/commonlib_ios/CocoaPodsSpecs.git,https://github.com/CocoaPods/Specs.git
