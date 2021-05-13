@@ -54,4 +54,4 @@ TODO: Add long description of the pod here.
 end
 
 
-#pod repo push leshiguang LZShareKit.podspec --allow-warnings --verbose --sources=https://github.com/leshiguang/cocoapods.git,https://github.com/CocoaPods/Specs.git
+#pod repo push leshiguang LZShareKit.podspec --allow-warnings --verbose --sources=git@github.com:leshiguang/cocoapods.git,https://github.com/CocoaPods/Specs.git
