@@ -46,7 +46,7 @@ TODO: Add long description of the pod here.
   s.dependency 'Logan', '~> 1.2'
 #  s.dependency 'LZBluetooth'
   s.libraries = 'z', 'c++', 'stdc++'
-#  s.vendored_framework = 'LSBluetoothUI_iOS.framework'
+  s.vendored_framework = 'LSBluetoothUI_iOS.framework'
 #  s.source_files = 'LSBluetoothUI_iOS/Classes/**/*'
 #  s.public_header_files = 'LSBluetoothUI_iOS/LSBluetoothUI.h'
 
