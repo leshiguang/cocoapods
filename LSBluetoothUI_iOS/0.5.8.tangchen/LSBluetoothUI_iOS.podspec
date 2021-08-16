@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSBluetoothUI_iOS'
-  s.version          = '0.5.7.tangchen'
+  s.version          = '0.5.8.tangchen'
   s.summary          = 'A short description of LSBluetoothUI_iOS.'
 
 # This description is used to generate tags and improve search results.
