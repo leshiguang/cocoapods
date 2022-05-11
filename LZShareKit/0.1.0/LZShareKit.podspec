@@ -23,7 +23,7 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'git@gitlab.lifesense.com:lego/lzsharekit.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = "MIT"
   s.author           = { 'malai_520@163.com' => 'malai_520@163.com' }
   s.source           = { :http => "https://media.githubusercontent.com/media/leshiguang/Framework/main/LZShareKit/#{s.version.to_s}/LZShareKit.zip"}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
