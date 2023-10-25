@@ -1,2 +1,2 @@
 # cocoapods
-lifesense cocoapods repository
+leshiguang cocoapods repository
